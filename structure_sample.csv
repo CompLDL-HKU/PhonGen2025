@@ -1,0 +1,18 @@
+,element,explanation,mean,random,consonant_sample,consonant,vowel_sample,vowel
+0,cog,center of gravity,"4000, 7000",gaussian,7109.092273821158,c,0.0,i
+1,fri_dur,frication duration,"96, 174",gaussian,163.17826916933828,c,0.0,i
+2,sta_dev,standard deviation,200,gaussian,205.4362929576633,c,0.0,i
+3,skewness,skewness,0.5,gaussian,0.5148487992194656,c,0.0,i
+4,kurtosis,kurtosis,1,gaussian,0.9083603032184705,c,0.0,i
+5,bur_int,burst intensity,50,gaussian,47.76577116194062,c,0.0,i
+6,fri_int,frication intensity,60,gaussian,64.80444698151142,c,0.0,i
+7,tot_dur,total duration,"200 for con, 400 for vow",fixed,200.0,c,400.0,i
+8,voc_dur,vocalic duration,"0 for con, 400 for vow",fixed,0.0,c,400.0,i
+9,voc_int,vocalic intensity,"0 for con, 80 for vow",gaussian,0.0,c,72.61917825425039,i
+10,f0,fundamental frequency,200,gaussian,0.0,c,212.39485421838512,i
+11,b3,bandwidth of f3,170,gaussian,0.0,c,161.94203673675676,i
+12,b2,bandwidth of f2,110,gaussian,0.0,c,109.72841264248058,i
+13,b1,bandwidth of f1,90,gaussian,0.0,c,87.74978366371573,i
+14,f3,f3,,gaussian,0.0,c,3172.5145862579657,i
+15,f2,f2,,gaussian,0.0,c,2777.768430007896,i
+16,f1,f1,,gaussian,0.0,c,393.947016121369,i
