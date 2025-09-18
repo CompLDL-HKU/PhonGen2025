@@ -15,7 +15,7 @@ class NPYDataset(Dataset):
         """
         # Load CSV
         df = pd.read_csv(csv_path)
-        df = df.sample(frac=1).reset_index(drop=True)  # Shuffle data
+        #df = df.sample(frac=1).reset_index(drop=True)  # Shuffle data
 
         # Filter by train/test split
         if train_only:
@@ -29,14 +29,6 @@ class NPYDataset(Dataset):
         # Store DataFrame
         self.df = df
         self.base_path = base_path
-
-        # Extract class label from 'uid' (assuming format: 'label_rest')
-        self.df['label'] = self.df['uid'].apply(lambda x: x.split('_')[0])
-
-        # Encode labels as integers
-        self.labels = self.df['label'].unique()
-        self.label2idx = {label: idx for idx, label in enumerate(self.labels)}
-        self.df['label_idx'] = self.df['label'].map(self.label2idx)
 
     def __len__(self):
         return len(self.df)
