@@ -2,6 +2,7 @@
 import argparse
 import importlib.util
 import os
+import pandas as pd
 import torch
 import torch.optim as optim
 import tqdm
@@ -9,7 +10,6 @@ from model import SimpleResNet1D
 from loss import SupConLoss
 from torch.utils.data import DataLoader
 from dataset import NPYDatasetInfoCollect
-import wandb
 import numpy as np
 import sys
 
@@ -85,6 +85,19 @@ def evaluate(model, test_loader, criterion, device):
     print(f'Validation Loss: {avg_loss:.4f}')
     return avg_loss
 
+def batch_meta_to_df(batch_meta: dict) -> pd.DataFrame:
+    """
+    Convert a batch metadata dict (lists + tensors) into a pandas DataFrame.
+    """
+    clean_dict = {}
+    for k, v in batch_meta.items():
+        if torch.is_tensor(v):
+            # 1D tensor -> list of scalars
+            clean_dict[k] = v.detach().cpu().tolist()
+        else:
+            # already list of strings, bools, etc.
+            clean_dict[k] = v
+    return pd.DataFrame(clean_dict)
 
 @torch.no_grad()
 def evaluate_collect_outputs(
@@ -107,10 +120,9 @@ def evaluate_collect_outputs(
     model.to(device)
 
     all_vecs = []
-    csv_rows = []
-    row_idx = 0
+    csv_frames = []   # list to hold batch-level DataFrames
 
-    for inputs, targets in data_loader:
+    for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(data_loader)):
         inputs = inputs.to(device)
 
         # forward pass -> vectors
@@ -125,44 +137,36 @@ def evaluate_collect_outputs(
         # append vectors
         all_vecs.append(vec)
 
-        # write CSV rows per item
-        B = vec.size(0)
-        for i in range(B):
-            row = {"vec_index": row_idx}
-            for k in meta_keys:
-                val = batch[k][i]
-                # if tensors slipped in metadata, convert to python type
-                if torch.is_tensor(val):
-                    val = val.detach().cpu().item() if val.ndim == 0 else val.detach().cpu().tolist()
-                row[k] = val
-            csv_rows.append(row)
-            row_idx += 1
+        # append metadata DataFrame
+        batch_df = batch_meta_to_df(targets)
+        csv_frames.append(batch_df)
 
-    # stack to [N, D] and save
     if not all_vecs:
         raise RuntimeError("No vectors collected. Check your loader and input_key.")
     mat = torch.cat(all_vecs, dim=0).numpy()
     np.save(npy_path, mat)
 
     # save CSV
-    df = pd.DataFrame(csv_rows)
-    df.to_csv(csv_path, index=False)
+    csv_df = pd.concat(csv_frames, ignore_index=True)
+    csv_df.to_csv(csv_path, index=False)
 
     print(f"Saved vectors: {mat.shape} -> {os.path.abspath(npy_path)}")
-    print(f"Saved metadata rows: {len(df)} -> {os.path.abspath(csv_path)}")
+    print(f"Saved metadata rows: {len(csv_df)} -> {os.path.abspath(csv_path)}")
 
-    return {"npy_path": npy_path, "csv_path": csv_path, "shape": mat.shape, "n_rows": len(df)}
+    return
 
 
 def main(config_path):
     config = load_config(config_path)
     
     #weight dir
-    save_dir = os.path.join('..', 'weights', config.RUN_NAME)
+    save_dir = os.path.join(config.PROJECT_BASE_PATH, 'weights', config.RUN_NAME)
     os.makedirs(save_dir, exist_ok=True)
+    eval_save_dir = os.path.join(config.PROJECT_BASE_PATH, 'eval_outputs', config.RUN_NAME)
+    os.makedirs(eval_save_dir, exist_ok=True)
 
     # Load dataset
-    dataset = NPYDataset(
+    dataset = NPYDatasetInfoCollect(
         csv_path=config.CSV_PATH,
         base_path=config.NPY_BASE_PATH,
         max_samples=config.MAX_SAMPLES,
@@ -189,6 +193,15 @@ def main(config_path):
         print("No checkpoint found, end running evaluation.")
         sys.exit(0)
 
+    # Run evaluation and collect outputs
+    evaluate_collect_outputs(
+        model=model,
+        data_loader=dataloader,
+        device=config.DEVICE,
+        npy_path=os.path.join(eval_save_dir, f"vec_{last_epoch}.npy"),
+        csv_path=os.path.join(eval_save_dir, f"meta_{last_epoch}.csv"),
+        to_float32=True
+    )
 
 
 if __name__ == '__main__':

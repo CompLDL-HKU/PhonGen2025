@@ -61,6 +61,7 @@ class NPYDatasetInfoCollect(Dataset):
             base_path (str): Base directory where .npy files are stored.
             max_samples (int): Maximum number of samples to load.
             train_only (bool): If True, load only training data; else test data.
+            contain_all (bool): If True, load all data regardless of train/test split.
         """
         # Load CSV
         df = pd.read_csv(csv_path)
