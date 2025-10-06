@@ -5,11 +5,12 @@ LR = 1e-4
 MAX_SAMPLES = 50000000
 CSV_PATH = '/mnt/storage/ldl_linguistics/PhonGen2025/data/metadata.csv'
 NPY_BASE_PATH = '/mnt/storage/ldl_linguistics'
-PROJECT_BASE_PATH = '/mnt/storage/ldl_linguistics/PhonGen2025'
+READ_BASE_PATH = '/mnt/storage/ldl_linguistics/PhonGen2025'
+WRITE_BASE_PATH = '/mnt/storage/franklhtan/projects/PhonGen2025'
 DEVICE = 'cuda'
-OUT_FEATURES = 128
+OUT_FEATURES = 4
 TEMPERATURE = 0.07
-RUN_NAME = 'BS32_LR1E4_FEAT128_TEMP007'
+RUN_NAME = 'BS32_LR1E4_FEAT4_TEMP007V2'
 SAMPLE_LIST = ['/mnt/storage/ldl_linguistics/PhonGen2025/data/itsi/itsi_0001.npy',
                '/mnt/storage/ldl_linguistics/PhonGen2025/data/itsi/itsi_0002.npy',
                '/mnt/storage/ldl_linguistics/PhonGen2025/data/itsi/itsi_0001.npy',

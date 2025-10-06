@@ -17,12 +17,12 @@ class SimpleResNet1D(nn.Module):
             nn.MaxPool1d(2)
         )
         self.layer3 = nn.Sequential(
-            nn.Conv1d(32, 64, 3, padding=1),
-            nn.BatchNorm1d(64),
+            nn.Conv1d(32, 16, 3, padding=1),
+            nn.BatchNorm1d(16),
             nn.ReLU(),
             nn.AdaptiveAvgPool1d(1)
         )
-        self.fc = nn.Linear(64, out_features)
+        self.fc = nn.Linear(16, out_features)
 
     def forward(self, x):
         x = self.layer1(x)

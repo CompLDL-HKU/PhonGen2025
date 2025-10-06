@@ -160,9 +160,9 @@ def main(config_path):
     config = load_config(config_path)
     
     #weight dir
-    save_dir = os.path.join(config.PROJECT_BASE_PATH, 'weights', config.RUN_NAME)
-    os.makedirs(save_dir, exist_ok=True)
-    eval_save_dir = os.path.join(config.PROJECT_BASE_PATH, 'eval_outputs', config.RUN_NAME)
+    save_dir = os.path.join(config.READ_BASE_PATH, 'weights', config.RUN_NAME)
+    # os.makedirs(save_dir, exist_ok=True)
+    eval_save_dir = os.path.join(config.WRITE_BASE_PATH, 'eval_outputs', config.RUN_NAME)
     os.makedirs(eval_save_dir, exist_ok=True)
 
     # Load dataset
