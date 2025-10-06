@@ -54,7 +54,7 @@ class NPYDatasetInfoCollect(Dataset):
     Dataset class that returns data along with metadata information.
     For EVLUATION only. 
     """
-    def __init__(self, csv_path, base_path, max_samples=5000, train_only=True, contain_all=False):
+    def __init__(self, csv_path, base_path, max_samples=5000, train_only=True, contain_all=False, minmax=False):
         """
         Args:
             csv_path (str): Path to the CSV metadata file.
@@ -63,6 +63,10 @@ class NPYDatasetInfoCollect(Dataset):
             train_only (bool): If True, load only training data; else test data.
             contain_all (bool): If True, load all data regardless of train/test split.
         """
+        self.minmax = minmax
+        self.min= [0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3, 3000, 70, 180, 0.45, 0.9, 45, 54, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3]
+
+        self.max= [1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1, 8000, 200, 220, 0.55, 1.1, 55, 66, 400, 400, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1]
         # Load CSV
         df = pd.read_csv(csv_path)
         #df = df.sample(frac=1).reset_index(drop=True)  # Shuffle data
@@ -97,6 +101,13 @@ class NPYDatasetInfoCollect(Dataset):
 
         # Reshape as needed: flatten and add channel dimension
         data_tensor = data_tensor.reshape(-1)  # flatten to 1D
+        # Apply Min–Max normalization if enabled
+        if getattr(self, "minmax", False):
+            min_vals = np.array(self.min)
+            max_vals = np.array(self.max)
+            data_tensor = (data_tensor - min_vals) / (max_vals - min_vals + 1e-8)  # avoid /0
+            data = np.clip(data, 0.0, 1.0)  # keep clean range
+
         data_tensor = data_tensor.unsqueeze(0)  # add channel dimension (1, N)
 
         info = {

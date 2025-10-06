@@ -170,7 +170,8 @@ def main(config_path):
         csv_path=config.CSV_PATH,
         base_path=config.NPY_BASE_PATH,
         max_samples=config.MAX_SAMPLES,
-        contain_all=True
+        contain_all=True, 
+        minmax=config.MINMAX, 
     )
     dataloader = DataLoader(dataset, batch_size=config.BATCH_SIZE, shuffle=False)
 
@@ -198,8 +199,8 @@ def main(config_path):
         model=model,
         data_loader=dataloader,
         device=config.DEVICE,
-        npy_path=os.path.join(eval_save_dir, f"vec_{last_epoch}.npy"),
-        csv_path=os.path.join(eval_save_dir, f"meta_{last_epoch}.csv"),
+        npy_path=os.path.join(eval_save_dir, f"vec_{config.RUN_NAME}_{last_epoch}.npy"),
+        csv_path=os.path.join(eval_save_dir, f"meta_{config.RUN_NAME}_{last_epoch}.csv"),
         to_float32=True
     )
 
