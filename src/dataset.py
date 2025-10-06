@@ -108,7 +108,7 @@ class NPYDatasetInfoCollect(Dataset):
             data_tensor = (data_tensor - min_vals) / (max_vals - min_vals + 1e-8)  # avoid /0
             data = np.clip(data, 0.0, 1.0)  # keep clean range
 
-        data_tensor = data_tensor.unsqueeze(0)  # add channel dimension (1, N)
+        data_tensor = torch.tensor(data_tensor, dtype=torch.float32).unsqueeze(0)  # add channel dimension (1, N)
 
         info = {
             "uid": row["uid"],
