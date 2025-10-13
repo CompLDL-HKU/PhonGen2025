@@ -47,3 +47,38 @@ class NPYDataset(Dataset):
 
         label = row['label_idx']
         return data_tensor, label
+
+
+class NPYDatasetv2(Dataset):
+    def __init__(self, csv_path):
+        """
+        Args:
+            csv_path (str): Path to the CSV metadata file.
+            base_path (str): Base directory where .npy files are stored.
+            max_samples (int): Maximum number of samples to load.
+            train_only (bool): If True, load only training data; else test data.
+        """
+        # Load CSV
+        df = pd.read_csv(csv_path)
+        #df = df.sample(frac=1).reset_index(drop=True)  # Shuffle data
+
+
+        # Store DataFrame
+        self.df = df
+
+    def __len__(self):
+        return len(self.df)
+
+    def __getitem__(self, idx):
+        row = self.df.iloc[idx]
+        data = np.load(row['path'])  # shape: (3, 17)
+
+        # Convert numpy array to tensor
+        data_tensor = torch.tensor(data, dtype=torch.float32)
+
+        # Reshape as needed: flatten and add channel dimension
+        data_tensor = data_tensor.reshape(-1)  # flatten to 1D
+        data_tensor = data_tensor.unsqueeze(0)  # add channel dimension (1, N)
+
+        label = row['train']
+        return data_tensor, label
