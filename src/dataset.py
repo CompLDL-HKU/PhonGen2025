@@ -82,7 +82,7 @@ class NPYDatasetInfoCollect(Dataset):
                 df = df[df['train'] == 'no']
 
         # Limit to max_samples
-        df = df.iloc[:max_samples]
+        # df = df.iloc[:max_samples]
 
         # Store DataFrame
         self.df = df
@@ -120,8 +120,8 @@ class NPYDatasetInfoCollect(Dataset):
             "consonant": row["consonant"],
             "vowel": row["vowel"],
             "train": row["train"],
-            "label": row["label"],       # string or raw label
-            "label_idx": row["label_idx"]  # numerical class index
+            # "label": row["label"],       # string or raw label
+            # "label_idx": row["label_idx"]  # numerical class index
         }
 
         return data_tensor, info

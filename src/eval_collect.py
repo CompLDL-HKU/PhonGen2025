@@ -167,11 +167,11 @@ def main(config_path):
 
     # Load dataset
     dataset = NPYDatasetInfoCollect(
-        csv_path=config.CSV_PATH,
+        csv_path=config.CSV_PATH3,
         base_path=config.NPY_BASE_PATH,
         max_samples=config.MAX_SAMPLES,
         contain_all=True, 
-        minmax=config.MINMAX, 
+        # minmax=config.MINMAX, 
     )
     dataloader = DataLoader(dataset, batch_size=config.BATCH_SIZE, shuffle=False)
 
