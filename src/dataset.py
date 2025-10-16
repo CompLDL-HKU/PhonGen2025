@@ -93,8 +93,8 @@ class NPYDatasetInfoCollect(Dataset):
 
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
-        npy_path = os.path.join(self.base_path, row['path'])
-        data = np.load(npy_path)  # shape: (3, 17)
+        # npy_path = os.path.join(self.base_path, row['path'])
+        data = np.load(row['path'])  # shape: (3, 17)
 
         # Convert numpy array to tensor
         data_tensor = torch.tensor(data, dtype=torch.float32)
@@ -115,6 +115,7 @@ class NPYDatasetInfoCollect(Dataset):
             "path": row["path"],
             "cog": row["cog"],
             "fri_dur": row["fri_dur"],
+            "voicing": row["voicing"],
             "word": row["word"],
             "consonant": row["consonant"],
             "vowel": row["vowel"],
