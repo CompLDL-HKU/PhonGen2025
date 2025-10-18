@@ -9,4 +9,4 @@
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
 
-singularity exec --bind /mnt/storage/:/mnt/storage/ --v --fakeroot /mnt/storage/franklhtan/ubuntu bash -c "cd /mnt/storage/franklhtan/projects/PhonGen2025/src;python3 eval_collect_twophase.py --config ./configs/C_b_BS32_LR1e4v2_FEAT_4_EU.py"
+singularity exec --bind /mnt/storage/:/mnt/storage/ --nv --fakeroot /mnt/storage/franklhtan/ubuntu bash -c "cd /mnt/storage/franklhtan/projects/PhonGen2025/src;python3 eval_collect_twophase.py --config ./configs/C_b_BS32_LR1e4v2_FEAT_4_EU.py"

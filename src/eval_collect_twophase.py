@@ -213,7 +213,7 @@ def main(config_path):
     )
     evaluate_collect_outputs(
         model=model,
-        data_loader=dataloader_L1,
+        data_loader=dataloader_L2,
         device=config.DEVICE,
         npy_path=os.path.join(eval_save_dir, f"vec_{config.RUN_NAME}_{last_epoch}_L2.npy"),
         csv_path=os.path.join(eval_save_dir, f"meta_{config.RUN_NAME}_{last_epoch}_L2.csv"),
