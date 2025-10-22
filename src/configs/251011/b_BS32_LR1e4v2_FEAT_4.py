@@ -8,6 +8,7 @@ CSV_PATH3 = '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_test_b/me
 DEVICE = 'cuda'
 OUT_FEATURES = 4
 TEMPERATURE = 0.07
+SIMILARITY = "cosine"
 RUN_NAME = 'b_BS32_LR1E4_FEAT4_TEMP007V2.2'
 SAMPLE_LIST = ['/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase1/aca/aca_0001.npy',
                 '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase1/asa/asa_0001.npy',

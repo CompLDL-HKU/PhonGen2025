@@ -8,7 +8,7 @@ import tqdm
 from model import SimpleResNet1D
 from loss import SupConLossv2
 from torch.utils.data import DataLoader
-from dataset import NPYDatasetv2
+from dataset import NPYDataset
 import wandb
 import numpy as np
 import sys
@@ -26,7 +26,7 @@ def load_config(config_path):
     spec.loader.exec_module(config)
     return config
 
-def sample_test_wrapper(sample_list,model,device,similarity_config,epoch):
+def sample_test_wrapper(sample_list,model,device,epoch):
     length = len(sample_list)
     left_index = 0
     for i in range(length//2):
@@ -35,11 +35,11 @@ def sample_test_wrapper(sample_list,model,device,similarity_config,epoch):
         left_name = sample_list[left_index].split('/')[-1].split('.')[0]
         right_name = sample_list[left_index+1].split('/')[-1].split('.')[0]
         #print(f"{left_name}*{right_name}")
-        similarity = sample_test(sample_list[left_index], sample_list[left_index+1],model,similarity_config,device)
+        similarity = sample_test(sample_list[left_index], sample_list[left_index+1],model,device)
         wandb.log({f"{left_name}*{right_name}": similarity,"epoch": epoch})
         left_index = left_index + 2 # 0vs1, 2vs3, 4vs5
 
-def sample_test(path1,path2,model,similarity_config,device):
+def sample_test(path1,path2,model,device):
     array1 = np.load(path1)
     array1_flat = array1.flatten()
     array1_input = array1_flat.reshape(1, 1, 51)
@@ -57,20 +57,12 @@ def sample_test(path1,path2,model,similarity_config,device):
     with torch.no_grad():
         feature2 = model(tensor_input2)
     
-    if similarity_config == 'cosine':
-        feat1 = feature1.cpu().numpy().flatten()
-        norm_feat1 = feat1 / np.linalg.norm(feat1)
-        feat2 = feature2.cpu().numpy().flatten()
-        norm_feat2 = feat2 / np.linalg.norm(feat2)
-        cosine_sim = np.dot(norm_feat1, norm_feat2)
-        similarity = cosine_sim.item()
-    if similarity_config == 'euclidean':
-        feat1 = feature1.flatten()
-        feat2 = feature2.flatten()
-        dist_squared = torch.sum(feat1 ** 2) - 2 * torch.dot(feat1, feat2) + torch.sum(feat2 ** 2)
-        euclidean_dist = torch.sqrt(torch.clamp(dist_squared, min=1e-8))
-        similarity = euclidean_dist.cpu().numpy().item()
-    return similarity
+    feat1 = feature1.cpu().numpy().flatten()
+    norm_feat1 = feat1 / np.linalg.norm(feat1)
+    feat2 = feature2.cpu().numpy().flatten()
+    norm_feat2 = feat2 / np.linalg.norm(feat2)
+    cosine_sim = np.dot(norm_feat1, norm_feat2)
+    return cosine_sim.item()
 
 
 def evaluate(model, test_loader, criterion, device):
@@ -97,36 +89,36 @@ def main(config_path):
     config = load_config(config_path)
     
     #weight dir
-    save_dir = os.path.join('..', 'weights', config.RUN_NAME)
+    save_dir = os.path.join('/mnt/storage/ldl_linguistics/PhonGen2025', 'weights', config.RUN_NAME)
     os.makedirs(save_dir, exist_ok=True)
     
     #sample test
     sample_list = config.SAMPLE_LIST
 
      # Initialize wandb
-    wandb.init(project="Phon20251011", name=config.RUN_NAME)
+    wandb.init(project="Phon2025", name=config.RUN_NAME)
     
     
 
     # Load dataset
-    dataset1 = NPYDatasetv2(
-        csv_path=config.CSV_PATH
+    dataset = NPYDataset(
+        csv_path=config.CSV_PATH,
+        base_path=config.NPY_BASE_PATH,
+        max_samples=config.MAX_SAMPLES,
+        train_only=True
     )
-    dataset2 = NPYDatasetv2(
-        csv_path=config.CSV_PATH2
+    testset = NPYDataset(
+        csv_path=config.CSV_PATH,
+        base_path=config.NPY_BASE_PATH,
+        max_samples=config.MAX_SAMPLES,
+        train_only=False
     )
-    testset = NPYDatasetv2(
-        csv_path=config.CSV_PATH3
-    )
-    dataloader1 = DataLoader(dataset1, batch_size=config.BATCH_SIZE, shuffle=True)
-    dataloader2 = DataLoader(dataset2, batch_size=config.BATCH_SIZE, shuffle=True)
+    dataloader = DataLoader(dataset, batch_size=config.BATCH_SIZE, shuffle=True)
     testloader = DataLoader(testset, batch_size=config.BATCH_SIZE, shuffle=True)
 
     # Initialize model, loss, optimizer
     model = SimpleResNet1D(out_features=config.OUT_FEATURES).to(config.DEVICE)
-    similarity_config = config.SIMILARITY
-    criterion = SupConLossv2(temperature=config.TEMPERATURE,similarity=similarity_config)
-    criterion2 = SupConLossv2(temperature=config.TEMPERATURE,similarity=similarity_config,v2=False)
+    criterion = SupConLossv2(temperature=config.TEMPERATURE)
     optimizer = optim.Adam(model.parameters(), lr=config.LR)
 
     # Get and sort checkpoint files based on epoch number
@@ -145,27 +137,14 @@ def main(config_path):
         print("No checkpoint found, starting training from scratch.")
         last_epoch = 0 
          #test the sample before the training
-        sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,0)   
+        sample_test_wrapper(sample_list,model,config.DEVICE,0)   
 
 
     start_epoch = last_epoch + 1
     for epoch in range(start_epoch, start_epoch+config.EPOCHS):
         epoch_loss = 0
         model.train()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
-            inputs = inputs.to(config.DEVICE)
-            targets = targets.to(config.DEVICE)
-
-            features = model(inputs)
-            features = features.unsqueeze(1)  # Add view dimension if needed
-            loss = criterion(features, targets)
-
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-
-            epoch_loss += loss.item()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader2, desc=f'd2_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
+        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader, desc=f'Epoch {epoch}/{last_epoch+config.EPOCHS}')):
             inputs = inputs.to(config.DEVICE)
             targets = targets.to(config.DEVICE)
 
@@ -179,11 +158,11 @@ def main(config_path):
 
             epoch_loss += loss.item()
 
-            #wandb.log({"batch_loss": loss.item(), "epoch": epoch})
-        avg_loss = epoch_loss / (len(dataloader1)+len(dataloader2))
+            wandb.log({"batch_loss": loss.item(), "epoch": epoch})
+        avg_loss = epoch_loss / len(dataloader)
         print(f"Epoch {epoch} Loss: {avg_loss:.4f}")
         wandb.log({"train_loss": avg_loss, "epoch": epoch})
-        test_loss = evaluate(model, testloader, criterion2, config.DEVICE)
+        test_loss = evaluate(model, testloader, criterion, config.DEVICE)
         wandb.log({"test_loss": test_loss, "epoch": epoch})
         
         # Save the latest checkpoint, overwriting the previous one
@@ -196,7 +175,7 @@ def main(config_path):
             torch.save(model.state_dict(), checkpoint_path_epoch)
         
         #test some samples
-        sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
+        sample_test_wrapper(sample_list,model,config.DEVICE,epoch+1)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Training script with config path')
