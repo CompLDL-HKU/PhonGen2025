@@ -149,54 +149,98 @@ def main(config_path):
 
 
     start_epoch = last_epoch + 1
-    for epoch in range(start_epoch, start_epoch+config.EPOCHS):
-        epoch_loss = 0
-        model.train()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
-            inputs = inputs.to(config.DEVICE)
-            targets = targets.to(config.DEVICE)
+    first_end_epoch = min(51, start_epoch+config.EPOCHS)
+    if start_epoch < 50 :
+        print("first phase")
+        print(f"first_end_epoch:{first_end_epoch}")
+        for epoch in range(start_epoch, first_end_epoch):
+            epoch_loss = 0
+            model.train()
+            for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{first_end_epoch}')):
+                inputs = inputs.to(config.DEVICE)
+                targets = targets.to(config.DEVICE)
 
-            features = model(inputs)
-            features = features.unsqueeze(1)  # Add view dimension if needed
-            loss = criterion(features, targets)
+                features = model(inputs)
+                features = features.unsqueeze(1)  # Add view dimension if needed
+                loss = criterion(features, targets)
 
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
 
-            epoch_loss += loss.item()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader2, desc=f'd2_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
-            inputs = inputs.to(config.DEVICE)
-            targets = targets.to(config.DEVICE)
+                epoch_loss += loss.item()
 
-            features = model(inputs)
-            features = features.unsqueeze(1)  # Add view dimension if needed
-            loss = criterion(features, targets)
+                #wandb.log({"batch_loss": loss.item(), "epoch": epoch})
+            avg_loss = epoch_loss / (len(dataloader1))
+            print(f"Epoch {epoch} Loss: {avg_loss:.4f}")
+            wandb.log({"train_loss": avg_loss, "epoch": epoch})
+            test_loss = evaluate(model, testloader, criterion2, config.DEVICE)
+            wandb.log({"test_loss": test_loss, "epoch": epoch})
+            
+            # Save the latest checkpoint, overwriting the previous one
+            checkpoint_path_latest = os.path.join(save_dir, 'checkpoint_latest.pt')
+            torch.save(model.state_dict(), checkpoint_path_latest)
 
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
+            # Save a checkpoint every 10 epochs
+            if epoch % 10 == 0:
+                checkpoint_path_epoch = os.path.join(save_dir, f'checkpoint_epoch_{epoch}.pt')
+                torch.save(model.state_dict(), checkpoint_path_epoch)
+            
+            #test some samples
+            sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
+    
+    second_start_epoch = max(start_epoch,first_end_epoch)
+    if second_start_epoch < start_epoch+config.EPOCHS:
+        print("second phase:")
+        print(f"second_start_epoch:{second_start_epoch}")
+        for epoch in range(second_start_epoch, start_epoch+config.EPOCHS):
+            epoch_loss = 0
+            model.train()
+            for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
+                inputs = inputs.to(config.DEVICE)
+                targets = targets.to(config.DEVICE)
 
-            epoch_loss += loss.item()
+                features = model(inputs)
+                features = features.unsqueeze(1)  # Add view dimension if needed
+                loss = criterion(features, targets)
 
-            #wandb.log({"batch_loss": loss.item(), "epoch": epoch})
-        avg_loss = epoch_loss / (len(dataloader1)+len(dataloader2))
-        print(f"Epoch {epoch} Loss: {avg_loss:.4f}")
-        wandb.log({"train_loss": avg_loss, "epoch": epoch})
-        test_loss = evaluate(model, testloader, criterion2, config.DEVICE)
-        wandb.log({"test_loss": test_loss, "epoch": epoch})
-        
-        # Save the latest checkpoint, overwriting the previous one
-        checkpoint_path_latest = os.path.join(save_dir, 'checkpoint_latest.pt')
-        torch.save(model.state_dict(), checkpoint_path_latest)
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
 
-        # Save a checkpoint every 10 epochs
-        if epoch % 10 == 0:
-            checkpoint_path_epoch = os.path.join(save_dir, f'checkpoint_epoch_{epoch}.pt')
-            torch.save(model.state_dict(), checkpoint_path_epoch)
-        
-        #test some samples
-        sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
+                epoch_loss += loss.item()
+            for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader2, desc=f'd2_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
+                inputs = inputs.to(config.DEVICE)
+                targets = targets.to(config.DEVICE)
+
+                features = model(inputs)
+                features = features.unsqueeze(1)  # Add view dimension if needed
+                loss = criterion(features, targets)
+
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+                epoch_loss += loss.item()
+
+                #wandb.log({"batch_loss": loss.item(), "epoch": epoch})
+            avg_loss = epoch_loss / (len(dataloader1)+len(dataloader2))
+            print(f"Epoch {epoch} Loss: {avg_loss:.4f}")
+            wandb.log({"train_loss": avg_loss, "epoch": epoch})
+            test_loss = evaluate(model, testloader, criterion2, config.DEVICE)
+            wandb.log({"test_loss": test_loss, "epoch": epoch})
+            
+            # Save the latest checkpoint, overwriting the previous one
+            checkpoint_path_latest = os.path.join(save_dir, 'checkpoint_latest.pt')
+            torch.save(model.state_dict(), checkpoint_path_latest)
+
+            # Save a checkpoint every 10 epochs
+            if epoch % 10 == 0:
+                checkpoint_path_epoch = os.path.join(save_dir, f'checkpoint_epoch_{epoch}.pt')
+                torch.save(model.state_dict(), checkpoint_path_epoch)
+            
+            #test some samples
+            sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Training script with config path')

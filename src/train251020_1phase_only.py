@@ -152,20 +152,7 @@ def main(config_path):
     for epoch in range(start_epoch, start_epoch+config.EPOCHS):
         epoch_loss = 0
         model.train()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
-            inputs = inputs.to(config.DEVICE)
-            targets = targets.to(config.DEVICE)
-
-            features = model(inputs)
-            features = features.unsqueeze(1)  # Add view dimension if needed
-            loss = criterion(features, targets)
-
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-
-            epoch_loss += loss.item()
-        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader2, desc=f'd2_Epoch {epoch}/{last_epoch+config.EPOCHS}')):
+        for batch_idx, (inputs, targets) in enumerate(tqdm.tqdm(dataloader1, desc=f'd1_Epoch {epoch}/{start_epoch+config.EPOCHS}')):
             inputs = inputs.to(config.DEVICE)
             targets = targets.to(config.DEVICE)
 
@@ -180,7 +167,7 @@ def main(config_path):
             epoch_loss += loss.item()
 
             #wandb.log({"batch_loss": loss.item(), "epoch": epoch})
-        avg_loss = epoch_loss / (len(dataloader1)+len(dataloader2))
+        avg_loss = epoch_loss / (len(dataloader1))
         print(f"Epoch {epoch} Loss: {avg_loss:.4f}")
         wandb.log({"train_loss": avg_loss, "epoch": epoch})
         test_loss = evaluate(model, testloader, criterion2, config.DEVICE)
@@ -197,6 +184,8 @@ def main(config_path):
         
         #test some samples
         sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
+
+    
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Training script with config path')

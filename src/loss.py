@@ -69,9 +69,23 @@ class SupConLossv2(nn.Module):
             anchor_count = contrast_count
         else:
             raise ValueError('Unknown mode: {}'.format(self.contrast_mode))
-        anchor_dot_contrast = torch.div(
-            torch.matmul(anchor_feature, contrast_feature.T),
-            self.temperature)
+
+        if self.similarity == "cosine":
+            anchor_dot_contrast = torch.div(
+                torch.matmul(anchor_feature, contrast_feature.T),
+                self.temperature)
+                
+        if self.similarity == "euclidian":
+            anchor_norm = torch.sum(anchor_feature ** 2, dim=1, keepdim=True)
+            contrast_norm = torch.sum(contrast_feature ** 2, dim=1, keepdim=True)
+            distances = anchor_norm - 2 * torch.matmul(anchor_feature, contrast_feature.T) + contrast_norm.T
+            distances = torch.sqrt(torch.clamp(distances, min=1e-8))  # 防止数值问题
+            anchor_dot_contrast = -distances / self.temperature
+        else:
+            anchor_dot_contrast = torch.div(
+                torch.matmul(anchor_feature, contrast_feature.T),
+                self.temperature)
+
         logits_max, _ = torch.max(anchor_dot_contrast, dim=1, keepdim=True)
         logits = anchor_dot_contrast - logits_max.detach()
         mask = mask.repeat(anchor_count, contrast_count)
