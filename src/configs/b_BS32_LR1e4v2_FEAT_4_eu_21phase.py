@@ -1,6 +1,6 @@
 # Configuration parameters
 BATCH_SIZE = 32
-EPOCHS = 200
+EPOCHS = 150
 LR = 1e-4
 CSV_PATH = '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase1/metadata_train_phase1.csv'
 CSV_PATH2 = '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase2_b/metadata_train_phase2_b.csv'
