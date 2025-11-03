@@ -1,0 +1,303 @@
+Running evaluation for: a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_10.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E10_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E10_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E10_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E10_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_20.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E20_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E20_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E20_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E20_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_30.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E30_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E30_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E30_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E30_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_40.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E40_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E40_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E40_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E40_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_50.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E50_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E50_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E50_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E50_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_60.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E60_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E60_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E60_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E60_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_70.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E70_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E70_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E70_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E70_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_80.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E80_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E80_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E80_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E80_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_90.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E90_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E90_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E90_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E90_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_100.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E100_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E100_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E100_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E100_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_110.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E110_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E110_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E110_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E110_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_120.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E120_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E120_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E120_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E120_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_130.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E130_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E130_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E130_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E130_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_140.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E140_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E140_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E140_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E140_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_150.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E150_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E150_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E150_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E150_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_160.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E160_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E160_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E160_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E160_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_170.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E170_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E170_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E170_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E170_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_180.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E180_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E180_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E180_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E180_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_190.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E190_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E190_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E190_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E190_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/checkpoint_epoch_200.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E200_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E200_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/vec_E200_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both/meta_E200_L2.csv
+Running evaluation for: a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_10.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E10_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E10_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E10_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E10_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_20.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E20_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E20_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E20_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E20_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_30.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E30_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E30_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E30_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E30_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_40.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E40_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E40_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E40_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E40_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_50.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E50_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E50_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E50_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E50_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_60.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E60_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E60_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E60_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E60_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_70.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E70_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E70_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E70_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E70_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_80.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E80_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E80_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E80_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E80_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_90.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E90_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E90_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E90_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E90_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_100.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E100_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E100_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E100_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E100_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_110.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E110_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E110_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E110_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E110_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_120.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E120_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E120_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E120_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E120_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_130.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E130_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E130_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E130_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E130_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_140.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E140_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E140_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E140_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E140_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_150.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E150_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E150_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E150_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E150_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_160.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E160_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E160_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E160_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E160_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_170.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E170_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E170_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E170_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E170_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_180.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E180_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E180_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E180_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E180_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_190.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E190_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E190_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E190_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E190_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/checkpoint_epoch_200.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E200_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E200_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/vec_E200_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_1phaseONLY/meta_E200_L2.csv
+Running evaluation for: a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_10.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E10_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E10_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E10_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E10_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_20.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E20_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E20_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E20_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E20_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_30.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E30_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E30_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E30_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E30_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_40.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E40_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E40_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E40_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E40_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_50.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E50_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E50_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E50_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E50_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_60.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E60_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E60_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E60_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E60_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_70.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E70_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E70_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E70_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E70_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_80.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E80_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E80_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E80_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E80_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_90.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E90_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E90_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E90_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E90_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_100.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E100_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E100_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E100_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E100_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_110.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E110_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E110_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E110_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E110_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_120.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E120_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E120_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E120_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E120_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_130.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E130_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E130_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E130_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E130_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_140.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E140_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E140_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E140_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E140_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_150.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E150_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E150_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E150_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E150_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_160.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E160_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E160_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E160_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E160_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_170.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E170_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E170_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E170_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E170_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_180.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E180_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E180_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E180_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E180_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_190.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E190_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E190_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E190_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E190_L2.csv
+Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/checkpoint_epoch_200.pt
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E200_L1.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E200_L1.csv
+Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/vec_E200_L2.npy
+Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/a_BS32_LR1E4_FEAT4_TEMP007V2_EU_2AT50_both/meta_E200_L2.csv
