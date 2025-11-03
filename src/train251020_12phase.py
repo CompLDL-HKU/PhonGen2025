@@ -93,20 +93,18 @@ def evaluate(model, test_loader, criterion, device):
     print(f'Validation Loss: {avg_loss:.4f}')
     return avg_loss
 
-def main(config_path):
+def main(config_path, run_time=0):
     config = load_config(config_path)
     
     #weight dir
-    save_dir = os.path.join('..', 'weights', config.RUN_NAME)
+    save_dir = os.path.join('..', 'weights', config.RUN_NAME, run_time)
     os.makedirs(save_dir, exist_ok=True)
     
     #sample test
     sample_list = config.SAMPLE_LIST
 
      # Initialize wandb
-    wandb.init(project="Phon20251011", name=config.RUN_NAME)
-    
-    
+    wandb.init(project="Phon20251011", name=config.RUN_NAME + f"_{run_time}")
 
     # Load dataset
     dataset1 = NPYDatasetv2(
@@ -247,4 +245,9 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, required=True, help='Path to config.py')
     args = parser.parse_args()
 
-    main(args.config)
+    config = load_config(config_path)
+    run_times_start, run_times_end = config.RUN_TIMES_START, config.RUN_TIMES_END
+
+    for run_time in range(run_times_start, run_times_end): 
+        print(f"NOW TRAINING: RUN {run_time}")
+        main(args.config, run_time)
