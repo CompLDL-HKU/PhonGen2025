@@ -97,7 +97,7 @@ def main(config_path, run_time=0):
     config = load_config(config_path)
     
     #weight dir
-    save_dir = os.path.join('..', 'weights', config.RUN_NAME, run_time)
+    save_dir = os.path.join('..', 'weights', config.RUN_NAME, f"{run_time}")
     os.makedirs(save_dir, exist_ok=True)
     
     #sample test
@@ -245,7 +245,7 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, required=True, help='Path to config.py')
     args = parser.parse_args()
 
-    config = load_config(config_path)
+    config = load_config(args.config)
     run_times_start, run_times_end = config.RUN_TIMES_START, config.RUN_TIMES_END
 
     for run_time in range(run_times_start, run_times_end): 
