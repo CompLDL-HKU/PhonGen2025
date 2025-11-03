@@ -1,5 +1,0 @@
-Loading checkpoint from /mnt/storage/ldl_linguistics/PhonGen2025/weights/b_BS32_LR1E4_FEAT4_TEMP007V2_EU/checkpoint_epoch_200.pt
-Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/b_BS32_LR1E4_FEAT4_TEMP007V2_EU/vec_b_BS32_LR1E4_FEAT4_TEMP007V2_EU_200_L1.npy
-Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/b_BS32_LR1E4_FEAT4_TEMP007V2_EU/meta_b_BS32_LR1E4_FEAT4_TEMP007V2_EU_200_L1.csv
-Saved vectors: (32000, 4) -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/b_BS32_LR1E4_FEAT4_TEMP007V2_EU/vec_b_BS32_LR1E4_FEAT4_TEMP007V2_EU_200_L2.npy
-Saved metadata rows: 32000 -> /mnt/storage/franklhtan/projects/PhonGen2025/eval_outputs/b_BS32_LR1E4_FEAT4_TEMP007V2_EU/meta_b_BS32_LR1E4_FEAT4_TEMP007V2_EU_200_L2.csv
