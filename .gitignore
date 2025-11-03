@@ -1,3 +1,5 @@
 eval_outputs/
 plots/
-slurm_config/
+slurm_config/out/*
+src/wandb/
+weights/
