@@ -10,8 +10,8 @@ OUT_FEATURES = 4
 TEMPERATURE = 0.07
 SIMILARITY = "euclidean"
 RUN_NAME = 'b_BS32_LR1E4_FEAT4_TEMP007V2_EU_1AT50_both'
-RUN_TIMES_START = 1
-RUN_TIMES_END = 6
+RUN_TIMES_START = 5
+RUN_TIMES_END = 10
 SAMPLE_LIST = ['/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase1/aca/aca_0001.npy',
                 '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase1/asa/asa_0001.npy',
 

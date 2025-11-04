@@ -104,7 +104,12 @@ def main(config_path, run_time=0):
     sample_list = config.SAMPLE_LIST
 
      # Initialize wandb
-    wandb.init(project="Phon20251011", name=config.RUN_NAME + f"_{run_time}")
+    # wandb.init(project="Phon20251011", name=config.RUN_NAME + f"_{run_time}")
+    wandb.init(
+        project="Phon20251011",
+        name=config.RUN_NAME + f"_{run_time}",
+        reinit=True  # allow reinitializing within the same process
+    )
 
     # Load dataset
     dataset1 = NPYDatasetv2(
@@ -239,6 +244,7 @@ def main(config_path, run_time=0):
             
             #test some samples
             sample_test_wrapper(sample_list,model,config.DEVICE,similarity_config,epoch+1)
+    wandb.finish()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Training script with config path')

@@ -3,3 +3,4 @@ plots/
 slurm_config/
 src/wandb/
 weights/
+*.pyc
