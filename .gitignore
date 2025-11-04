@@ -1,0 +1,8 @@
+eval_outputs/
+plots/
+slurm_config/
+src/wandb/
+weights/
+configs/__pycache__/
+*.pyc
+*.cpy
