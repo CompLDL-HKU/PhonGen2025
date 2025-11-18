@@ -115,7 +115,7 @@ class NPYDatasetInfoCollect(Dataset):
             "path": row["path"],
             "cog": row["cog"],
             "fri_dur": row["fri_dur"],
-            "voicing": row["voicing"],
+            # "voicing": row["voicing"],    # commented for diagonal
             "word": row["word"],
             "consonant": row["consonant"],
             "vowel": row["vowel"],
@@ -125,6 +125,8 @@ class NPYDatasetInfoCollect(Dataset):
         }
 
         return data_tensor, info
+
+# Oh since you gave me a way to try, I want to first adapt the old code to account for the new contrasts: there are 4 consonants: s c ts tc, and 8 vowels
 
 
 class NPYDatasetv2(Dataset):
