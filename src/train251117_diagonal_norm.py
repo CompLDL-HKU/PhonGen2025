@@ -42,8 +42,8 @@ def sample_test_wrapper(sample_list,model,device,similarity_config,epoch):
 def sample_test(path1,path2,model,similarity_config,device):
     norm_min= [0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3, 3000, 70, 180, 0.45, 0.9, 45, 54, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3]
     norm_max= [1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1, 8000, 200, 220, 0.55, 1.1, 55, 66, 400, 400, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1]
-    min_vals = np.array(norm_min)
-    max_vals = np.array(norm_max)
+    min_vals = np.array(norm_min, dtype=np.float32)
+    max_vals = np.array(norm_max, dtype=np.float32)
 
     array1 = np.load(path1)
     array1_flat = array1.flatten()

@@ -179,8 +179,8 @@ class NPYDatasetv2Norm(Dataset):
 
         self.min= [0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3, 3000, 70, 180, 0.45, 0.9, 45, 54, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, 72, 180, 153, 99, 81, 2461.5, 931.5, 393.3]
         self.max= [1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1, 8000, 200, 220, 0.55, 1.1, 55, 66, 400, 400, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 400, 400, 88, 220, 187, 121, 99, 3709.2, 3037.1, 859.1]
-        self.min_vals = np.array(self.min)
-        self.max_vals = np.array(self.max)
+        self.min_vals = np.array(self.min, dtype=np.float32)
+        self.max_vals = np.array(self.max, dtype=np.float32)
 
         # Store DataFrame
         self.df = df
@@ -200,7 +200,7 @@ class NPYDatasetv2Norm(Dataset):
 
         # Apply Min–Max normalization
         data_tensor = (data_tensor - self.min_vals) / (self.max_vals - self.min_vals + 1e-8)  # avoid /0
-        data = np.clip(data, 0.0, 1.0)  # keep clean range
+        data_tensor = np.clip(data_tensor, 0.0, 1.0)  # keep clean range
 
         data_tensor = data_tensor.unsqueeze(0)  # add channel dimension (1, N)
 
