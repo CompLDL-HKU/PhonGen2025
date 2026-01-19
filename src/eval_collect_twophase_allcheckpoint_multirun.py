@@ -29,32 +29,6 @@ def load_config(config_path):
     spec.loader.exec_module(config)
     return config
 
-def sample_test(path1,path2,model,device):
-    array1 = np.load(path1)
-    array1_flat = array1.flatten()
-    array1_input = array1_flat.reshape(1, 1, 51)
-    tensor_input1 = torch.from_numpy(array1_input).float()
-    tensor_input1 = tensor_input1.to(device)
-    with torch.no_grad():
-        feature1 = model(tensor_input1)
-
-    array2 = np.load(path2)    
-    array2_flat = array2.flatten() 
-    array2_input = array2_flat.reshape(1, 1, 51)
-    tensor_input2 = torch.from_numpy(array2_input).float()
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    tensor_input2 = tensor_input2.to(device)
-    with torch.no_grad():
-        feature2 = model(tensor_input2)
-    
-    feat1 = feature1.cpu().numpy().flatten()
-    norm_feat1 = feat1 / np.linalg.norm(feat1)
-    feat2 = feature2.cpu().numpy().flatten()
-    norm_feat2 = feat2 / np.linalg.norm(feat2)
-    cosine_sim = np.dot(norm_feat1, norm_feat2)
-    return cosine_sim.item()
-
-
 def evaluate(model, test_loader, criterion, device):
     model.eval()
     total_loss = 0
@@ -167,14 +141,14 @@ def main(config_path, run_name=None, run_time=0):
         base_path=config.NPY_BASE_PATH,
         max_samples=config.MAX_SAMPLES,
         contain_all=True, 
-        # minmax=config.MINMAX, 
+        minmax=config.MINMAX, 
     )
     dataset_L2 = NPYDatasetInfoCollect(
         csv_path=config.CSV_PATH3,
         base_path=config.NPY_BASE_PATH,
         max_samples=config.MAX_SAMPLES,
         contain_all=True, 
-        # minmax=config.MINMAX, 
+        minmax=config.MINMAX, 
     )
     dataloader_L1 = DataLoader(dataset_L1, batch_size=config.BATCH_SIZE, shuffle=False)
     dataloader_L2 = DataLoader(dataset_L2, batch_size=config.BATCH_SIZE, shuffle=False)
