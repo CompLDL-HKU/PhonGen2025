@@ -64,9 +64,9 @@ def main(config_path, run_time=0):
         csv_path=config.CSV_PATH3
     )
     # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
-    global_means, global_stds = testset.get_global_mean_std()
-    dataset1.set_global_mean_std(global_means, global_stds)
-    testset.set_global_mean_std(global_means, global_stds)
+    global_means, global_stds = testset.get_means_stds()
+    dataset1.set_means_stds(global_means, global_stds)
+    testset.set_means_stds(global_means, global_stds)
     
     dataloader1 = DataLoader(dataset1, batch_size=config.BATCH_SIZE, shuffle=True)
     testloader = DataLoader(testset, batch_size=config.BATCH_SIZE, shuffle=True)

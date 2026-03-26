@@ -233,10 +233,13 @@ class NPYDatasetv3Norm(Dataset):
 
     def __len__(self):
         return len(self.df)
+    
+    def temp_path_deal(self, path): 
+        return path.replace('/mnt/', '/mnt/storage/')
 
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
-        data = np.load(row['path'])  # shape: (3, 17)
+        data = np.load(self.temp_path_deal(row['path']))  # shape: (3, 17)
 
         # Convert numpy array to tensor
         data_tensor = torch.tensor(data, dtype=torch.float32)
@@ -257,7 +260,7 @@ class NPYDatasetv3Norm(Dataset):
         all_data = []
         for idx in range(len(self.df)):
             row = self.df.iloc[idx]
-            data = np.load(row['path'])  # shape: (3, 17)
+            data = np.load(self.temp_path_deal(row['path']))  # shape: (3, 17)
             data_tensor = torch.tensor(data, dtype=torch.float32).reshape(-1)  # flatten to 1D
             all_data.append(data_tensor.numpy())
         
