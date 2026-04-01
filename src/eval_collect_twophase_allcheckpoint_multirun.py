@@ -12,7 +12,7 @@ import tqdm
 from model import SimpleResNet1D
 from loss import SupConLoss
 from torch.utils.data import DataLoader
-from dataset import NPYDatasetInfoCollect
+from dataset import NPYDatasetv3NormCollect as DatasetCollect
 import numpy as np
 import sys
 
@@ -136,21 +136,19 @@ def main(config_path, run_name=None, run_time=0):
     os.makedirs(eval_save_dir_hyper, exist_ok=True)
 
     # Load dataset
-    dataset_L1 = NPYDatasetInfoCollect(
-        csv_path=config.CSV_PATH,
-        base_path=config.NPY_BASE_PATH,
-        max_samples=config.MAX_SAMPLES,
-        contain_all=True, 
-        minmax=config.MINMAX, 
-    )
-    dataset_L2 = NPYDatasetInfoCollect(
+    # dataset_L1 = DatasetCollect(
+    #     csv_path=config.CSV_PATH,
+    # )
+    dataset_L2 = DatasetCollect(
         csv_path=config.CSV_PATH3,
-        base_path=config.NPY_BASE_PATH,
-        max_samples=config.MAX_SAMPLES,
-        contain_all=True, 
-        minmax=config.MINMAX, 
     )
-    dataloader_L1 = DataLoader(dataset_L1, batch_size=config.BATCH_SIZE, shuffle=False)
+
+    # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
+    global_means, global_stds = dataset_L2.get_means_stds()
+    # dataset_L1.set_means_stds(global_means, global_stds)
+    dataset_L2.set_means_stds(global_means, global_stds)
+
+    # dataloader_L1 = DataLoader(dataset_L1, batch_size=config.BATCH_SIZE, shuffle=False)
     dataloader_L2 = DataLoader(dataset_L2, batch_size=config.BATCH_SIZE, shuffle=False)
 
     # Initialize model, loss, optimizer
@@ -171,14 +169,14 @@ def main(config_path, run_name=None, run_time=0):
             eval_save_dir = eval_save_dir_hyper
             os.makedirs(eval_save_dir, exist_ok=True)
             # Run evaluation and collect outputs
-            evaluate_collect_outputs(
-                model=model,
-                data_loader=dataloader_L1,
-                device=config.DEVICE,
-                npy_path=os.path.join(eval_save_dir, f"vec_E{this_epoch}_L1.npy"),
-                csv_path=os.path.join(eval_save_dir, f"meta_E{this_epoch}_L1.csv"),
-                to_float32=True
-            )
+            # evaluate_collect_outputs(
+            #     model=model,
+            #     data_loader=dataloader_L1,
+            #     device=config.DEVICE,
+            #     npy_path=os.path.join(eval_save_dir, f"vec_E{this_epoch}_L1.npy"),
+            #     csv_path=os.path.join(eval_save_dir, f"meta_E{this_epoch}_L1.csv"),
+            #     to_float32=True
+            # )
             evaluate_collect_outputs(
                 model=model,
                 data_loader=dataloader_L2,
