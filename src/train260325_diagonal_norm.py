@@ -63,10 +63,16 @@ def main(config_path, run_time=0):
     testset = NPYDatasetv3Norm(
         csv_path=config.CSV_PATH3
     )
-    # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
-    global_means, global_stds = testset.get_means_stds()
-    dataset1.set_means_stds(global_means, global_stds)
-    testset.set_means_stds(global_means, global_stds)
+
+    if config.NORMALIZE: 
+        # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
+        global_means, global_stds = testset.get_means_stds()
+        print(f"Global means: {global_means}, Global stds: {global_stds}")
+        dataset1.set_means_stds(global_means, global_stds)
+        testset.set_means_stds(global_means, global_stds)
+    else: 
+        print("No normalization applied to the dataset.")
+        global_means, global_stds = None, None
     
     dataloader1 = DataLoader(dataset1, batch_size=config.BATCH_SIZE, shuffle=True)
     testloader = DataLoader(testset, batch_size=config.BATCH_SIZE, shuffle=True)
