@@ -235,7 +235,8 @@ class NPYDatasetv3Norm(Dataset):
         return len(self.df)
     
     def temp_path_deal(self, path): 
-        return path.replace('/mnt/', '/mnt/storage/')
+        # return path.replace('/mnt/', '/mnt/storage/')
+        return path
 
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
@@ -299,7 +300,8 @@ class NPYDatasetv3NormCollect(Dataset):
         return len(self.df)
     
     def temp_path_deal(self, path): 
-        return path.replace('/mnt/', '/mnt/storage/')
+        # return path.replace('/mnt/', '/mnt/storage/')
+        return path
 
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
