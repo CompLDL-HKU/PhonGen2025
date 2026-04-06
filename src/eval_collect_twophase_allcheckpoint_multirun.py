@@ -143,10 +143,15 @@ def main(config_path, run_name=None, run_time=0):
         csv_path=config.CSV_PATH3,
     )
 
-    # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
-    global_means, global_stds = dataset_L2.get_means_stds()
-    # dataset_L1.set_means_stds(global_means, global_stds)
-    dataset_L2.set_means_stds(global_means, global_stds)
+    if config.NORMALIZE: 
+        # we use test mean to do the normalization for both train and test, this is because testing set has all four phonemes. 
+        global_means, global_stds = dataset_L2.get_means_stds()
+        print(f"Global means: {global_means}, Global stds: {global_stds}")
+        # dataset_L1.set_means_stds(global_means, global_stds)
+        dataset_L2.set_means_stds(global_means, global_stds)
+    else: 
+        print("No normalization applied to the dataset.")
+        global_means, global_stds = None, None
 
     # dataloader_L1 = DataLoader(dataset_L1, batch_size=config.BATCH_SIZE, shuffle=False)
     dataloader_L2 = DataLoader(dataset_L2, batch_size=config.BATCH_SIZE, shuffle=False)
