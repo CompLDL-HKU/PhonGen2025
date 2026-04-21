@@ -210,7 +210,7 @@ class NPYDatasetv2Norm(Dataset):
     
 
 class NPYDatasetv3Norm(Dataset):
-    def __init__(self, csv_path, means=None, stds=None):
+    def __init__(self, csv_path, means=None, stds=None, dim=51):
         """
         Args:
             csv_path (str): Path to the CSV metadata file.
@@ -225,8 +225,8 @@ class NPYDatasetv3Norm(Dataset):
             self.means = np.array(means, dtype=np.float32)
             self.stds = np.array(stds, dtype=np.float32)
         else:
-            self.means = np.zeros(51, dtype=np.float32)
-            self.stds = np.ones(51, dtype=np.float32)
+            self.means = np.zeros(dim, dtype=np.float32)
+            self.stds = np.ones(dim, dtype=np.float32)
 
         # Store DataFrame
         self.df = df

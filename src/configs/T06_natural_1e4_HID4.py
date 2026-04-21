@@ -9,6 +9,7 @@ CSV_PATH = f'/mnt/storage/ldl_linguistics/PhonGen2025_diag_new/{DATA_COLLECTION_
 # CSV_PATH2 = '/mnt/storage/ldl_linguistics/PhonGen2025/data_251011/data_train_phase2_a/metadata_train_phase2_a.csv'
 CSV_PATH3 = f'/mnt/storage/ldl_linguistics/PhonGen2025_diag_new/{DATA_COLLECTION_NAME}/data_test_{DATA_SUFFIX}/metadata_test_{DATA_SUFFIX}.csv'
 DEVICE = 'cuda'
+IN_FEATURES = 30
 OUT_FEATURES = 4
 TEMPERATURE = 0.07
 SIMILARITY = "euclidean"

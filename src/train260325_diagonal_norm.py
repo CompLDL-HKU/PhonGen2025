@@ -55,13 +55,16 @@ def main(config_path, run_time=0):
     
     #sample test
     sample_list = config.SAMPLE_LIST
+    dim = config.IN_FEATURES if hasattr(config, 'IN_FEATURES') else 51
 
     # Load dataset
     dataset1 = NPYDatasetv3Norm(
-        csv_path=config.CSV_PATH
+        csv_path=config.CSV_PATH, 
+        dim=dim
     )
     testset = NPYDatasetv3Norm(
-        csv_path=config.CSV_PATH3
+        csv_path=config.CSV_PATH3, 
+        dim=dim
     )
 
     if config.NORMALIZE: 
